@@ -1,9 +1,21 @@
-/*!*********************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!./styles/index.css ***!
-  \*********************************************************************/
 *{
     padding: 0;
-    margin: 0;;
+    margin: 0;
+}
+:root{
+    --base-scale:calc(100vw / 75);
+    --h2-font-size:max(1em, min(2em, calc(var(--base-scale) * 2)));
+}
+a{
+    text-decoration: none;
+}
+h2{
+    font-weight: bold;
+    font-size: var(--h2-font-size);
+}
+h3{
+    font-size: calc(var(--h2-font-size)*0.8);
+    font-weight: 900;
 }
 .mainFrame{
     width: 100vw;
@@ -22,6 +34,11 @@
     list-style: none;
     gap:2em;
     flex-wrap: wrap;
+    margin: 1vh 2.5vmax;
+    background: rgb(211, 215, 216);
+    border-radius: 2em;
+    box-shadow: -3px -3px 5px 1px rgb(229, 232, 233), 3px 3px 5px 1px rgb(151, 153, 153);
+    padding: 2em;
 }
 
 .operList{
@@ -29,12 +46,13 @@
     justify-content: center;
     align-items: center;
     list-style: none;
-    gap:2em;
+    gap:1.5em 2em;
     flex-wrap: wrap;
+    
 }
 .operList .listItem{
-    background-color: rgb(99, 94, 94);
-    padding: 0.75em 3.5em;
+    background: #148f2b;
+    padding: 0.88vh 2.9vw;
     border-radius: 1em;
     display: flex;
     justify-content: center;
@@ -42,14 +60,39 @@
     flex-direction: column;
     text-align: center;
     gap:1.5em;
+    transition: filter 0.5s;
+    filter: grayscale(50%);
+}
+.operList .listItem:hover{
+    filter: grayscale(0%);
+    color:#191919;
 }
 
 .btn{
-    background: coral;
+    background: radial-gradient(40% 50%, #FAECD5, #CAE4D8);
     padding: .75em 1em;
     border-radius: 50px;
-    color: rgb(128, 78, 60);
     text-decoration: none;
+    color: black;
+    transition: transform 1s, color 0.5s;
+    font-size: calc(var(--h2-font-size)*0.6);
+}
+.btn:hover{
+    color: aliceblue;
+    transform: translateY(2px);
+    background: linear-gradient(149deg, rgba(24,187,156,1) 0%, rgba(106,57,175,1) 42%, rgba(187,24,148,1) 72%, rgba(115,53,134,1) 100%);
+    animation: gradient 2s infinite linear; 
+    background-size: 400%; 
 }
 
-/*# sourceMappingURL=main.css.map*/
+@keyframes gradient {
+    0% {
+        background-position: 80% 0%;
+    }
+    50% {
+        background-position: 20% 100%;
+    }
+    100% {
+        background-position: 80% 0%;
+    }
+}
