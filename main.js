@@ -49,7 +49,7 @@ function MainFraim(props) {
 function OperatersList(props) {
   return /*#__PURE__*/React.createElement("article", {
     className: "operBlock"
-  }, /*#__PURE__*/React.createElement("h3", null, "\u0421\u043F\u0438\u0441\u043E\u043A \u043E\u043F\u0435\u0440\u0430\u0442\u043E\u0440\u043E\u0432"), /*#__PURE__*/React.createElement("ul", {
+  }, /*#__PURE__*/React.createElement("h2", null, "\u041F\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u044C \u0431\u0430\u043B\u0430\u043D\u0441"), /*#__PURE__*/React.createElement("ul", {
     className: "operList"
   }, operatorsConstruct(0)));
 }
@@ -59,7 +59,7 @@ function OperatersItem(props) {
     key: props.name
   }, /*#__PURE__*/React.createElement("div", {
     className: "listItem"
-  }, /*#__PURE__*/React.createElement("h4", null, props.name), /*#__PURE__*/React.createElement(TransperentBtn, {
+  }, /*#__PURE__*/React.createElement("h3", null, props.name), /*#__PURE__*/React.createElement(TransperentBtn, {
     forElem: props.name
   })));
 }
@@ -69,7 +69,7 @@ function TransperentBtn(props) {
     href: "form.html?for=".concat(props.forElem)
   }, /*#__PURE__*/React.createElement("div", {
     className: "btn"
-  }, console.log(props.forElem), "\u041F\u043E\u0434\u043A\u043B\u044E\u0447\u0438\u0442\u044C"));
+  }, console.log(props.forElem), "\u041E\u043F\u043B\u0430\u0442\u0438\u0442\u044C"));
 }
 
 function operatorsConstruct(mode) {
